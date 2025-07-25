@@ -1,0 +1,729 @@
+<!-- sections/featured-product.liquid -->
+{{ 'Featured-product.css' | asset_url | stylesheet_tag }}
+
+<!-- sections/featured-product.liquid -->
+{% assign product = section.settings.featured_product %}
+{% assign use_dummy = false %}
+
+{% comment %} Check if no product is selected, use dummy data {% endcomment %}
+{% unless product %}
+  {% assign use_dummy = true %}
+{% endunless %}
+
+<div class="featured-product-section">
+  <div class="container">
+    <div class="featured-product-wrapper">
+      <!-- Product Images Section -->
+      <div class="product-images">
+        <div class="main-image">
+          {% if product.featured_media %}
+            <img
+              id="mainProductImage"
+              src="{{ product.featured_media | img_url: '600x600' }}"
+              alt="{{ product.title }}"
+              class="product-main-image"
+            >
+          {% else %}
+            <img
+              src="https://via.placeholder.com/600x600/28a745/ffffff?text=No+Image"
+              alt="{{ product.title }}"
+              class="product-main-image"
+            >
+          {% endif %}
+        </div>
+
+        <!-- Thumbnail Images -->
+        <div class="product-thumbnails">
+          {% for media in product.media limit: 6 %}
+            <div class="thumbnail-item">
+              <img
+                src="{{ media | img_url: '100x100' }}"
+                data-large="{{ media | img_url: '600x600' }}"
+                alt="{{ product.title }}"
+                class="thumbnail-image"
+              >
+            </div>
+          {% endfor %}
+        </div>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const mainImage = document.getElementById("mainProductImage");
+            const thumbnails = document.querySelectorAll(".thumbnail-image");
+
+            thumbnails.forEach((thumb) => {
+              thumb.addEventListener("click", function () {
+                const largeImage = this.getAttribute("data-large");
+                mainImage.src = largeImage;
+              });
+            });
+          });
+        </script>
+
+        <!-- Customer Review Card -->
+        {% if section.settings.show_review %}
+          <div class="review-card">
+            <div class="review-stars">
+              {% for i in (1..5) %}
+                <span class="star">★</span>
+              {% endfor %}
+            </div>
+            <h4>{{ section.settings.review_title | default: 'Amazing Results!' }}</h4>
+            <p class="review-text">
+              {{
+                section.settings.review_text
+                | default: 'This product has completely transformed my daily routine. Highly recommended!'
+              }}
+            </p>
+            <div class="reviewer-info">
+              <strong>{{ section.settings.reviewer_name | default: 'Sarah M.' }}</strong>
+              <span class="verified">✓ Verified Purchase</span>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+
+      <!-- Product Info Section -->
+      <div class="product-info">
+        <!-- New Year's Sale Badge -->
+        {% if section.settings.show_sale_badge %}
+          <div class="sale-badge">
+            <span class="badge-text">{{ section.settings.badge_text | default: "NEW YEAR'S SALE" }}</span>
+          </div>
+        {% endif %}
+
+        <!-- Product Title -->
+        <h1 class="product-title">
+          {% if section.settings.product_title != blank %}
+            {{ section.settings.product_title }}
+          {% elsif use_dummy %}
+            Try Kamana Today
+          {% else %}
+            {{ product.title }}
+          {% endif %}
+        </h1>
+
+        <!-- Star Rating -->
+        {% if section.settings.show_rating %}
+          <div class="product-rating">
+            <div class="stars">
+              {% for i in (1..5) %}
+                <span class="star filled">★</span>
+              {% endfor %}
+            </div>
+            <span class="rating-count">{{ section.settings.review_count | default: '2,000+ Happy Customers' }}</span>
+          </div>
+        {% endif %}
+
+        <!-- Price -->
+
+        <div class="product-price">
+          {% render 'price', product_resource: product, show_unit_price: false %}
+        </div>
+
+        <!-- Product Features -->
+        {% if section.settings.show_features %}
+          <div class="product-features">
+            {% if section.settings.feature_1 != blank %}
+              <div class="feature-item">
+                <span class="checkmark">✓</span>
+                <span>{{ section.settings.feature_1 }}</span>
+              </div>
+            {% endif %}
+            {% if section.settings.feature_2 != blank %}
+              <div class="feature-item">
+                <span class="checkmark">✓</span>
+                <span>{{ section.settings.feature_2 }}</span>
+              </div>
+            {% endif %}
+            {% if section.settings.feature_3 != blank %}
+              <div class="feature-item">
+                <span class="checkmark">✓</span>
+                <span>{{ section.settings.feature_3 }}</span>
+              </div>
+            {% endif %}
+            {% if section.settings.feature_4 != blank %}
+              <div class="feature-item">
+                <span class="checkmark">✓</span>
+                <span>{{ section.settings.feature_4 }}</span>
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        <!-- Free Gifts Section -->
+        {% if section.settings.show_free_gifts and section.blocks.size > 0 %}
+          <div class="free-gifts">
+            <h3>{{ section.settings.gifts_heading | default: "You'll get these gifts:" }}</h3>
+            <div class="gift-items">
+              {% for block in section.blocks %}
+                {% case block.type %}
+                  {% when 'gift_item' %}
+                    <div class="gift-item" {{ block.shopify_attributes }}>
+                      {% if block.settings.gift_image %}
+                        <img
+                          src="{{ block.settings.gift_image | img_url: '80x80' }}"
+                          alt="{{ block.settings.gift_title }}"
+                        >
+                      {% else %}
+                        <img
+                          src="https://via.placeholder.com/80x80/28a745/ffffff?text=Gift"
+                          alt="{{ block.settings.gift_title }}"
+                        >
+                      {% endif %}
+                      <span>{{ block.settings.gift_title | default: 'Free Gift' }}</span>
+                    </div>
+                {% endcase %}
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+
+        <!-- Full Gift Value -->
+        {% if section.settings.show_gift_value %}
+          <div class="gift-value">
+            <strong>FULL GIFT VALUE: ${{ section.settings.gift_value | default: '33' }}</strong>
+          </div>
+        {% endif %}
+
+        {% assign button_blocks = section.blocks | where: 'type', 'buy_button' %}
+        <!-- Quantity Selector -->
+
+        {% if section.settings.show_quantity %}
+          <div class="quantity-section">
+            <label for="quantity" class="quantity-label">
+              {{- section.settings.quantity_label | default: 'Quantity:' -}}
+            </label>
+            <div class="quantity-selector">
+              <button type="button" class="quantity-btn quantity-minus" onclick="updateQuantity(-1)">-</button>
+              <input type="number" id="quantity" name="quantity" value="1" min="1" max="10" class="quantity-input">
+              <button type="button" class="quantity-btn quantity-plus" onclick="updateQuantity(1)">+</button>
+            </div>
+          </div>
+        {% endif %}
+
+        <!-- Buy Buttons -->
+        {% if button_blocks.size > 0 %}
+          <div class="buy-buttons">
+            {% for block in button_blocks %}
+              {% case block.type %}
+                {% when 'buy_button' %}
+                  <form action="/cart/add" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                    <input type="hidden" name="quantity" value="1">
+
+                    <button type="submit" class="buy-btn {{ block.settings.button_style }}">
+                      <span class="btn-text">{{ block.settings.button_text }}</span>
+                      {% if block.settings.show_icon %}
+                        <span class="btn-icon">{{ block.settings.button_icon }}</span>
+                      {% endif %}
+                    </button>
+                  </form>
+              {% endcase %}
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        <!-- Additional Info -->
+        {% if section.settings.show_additional_info %}
+          <div class="additional-info">
+            {% if section.settings.shipping_text != blank %}
+              <div class="shipping-info">
+                <span class="icon">🚚</span>
+                <span>{{ section.settings.shipping_text }}</span>
+              </div>
+            {% endif %}
+            {% if section.settings.guarantee_text != blank %}
+              <div class="guarantee-info">
+                <span class="icon">🔒</span>
+                <span>{{ section.settings.guarantee_text }}</span>
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        <!-- Guarantee Badge -->
+        {% if section.settings.show_guarantee %}
+          <div class="guarantee-badge">
+            <div class="guarantee-content">
+              <h4>{{ section.settings.guarantee_title | default: 'OUR 100% HAPPINESS GUARANTEE' }}</h4>
+              <p>
+                {{
+                  section.settings.guarantee_description
+                  | default: "If you're not completely satisfied, we'll refund your money."
+                }}
+              </p>
+            </div>
+          </div>
+        {% endif %}
+
+        <!-- Product Description -->
+
+        {% comment %}
+          {% if section.settings.show_description %}
+            <div class="product-description">
+              {% if section.settings.product_description != blank %}
+                {{ section.settings.product_description }}
+              {% elsif use_dummy %}
+                Our Caffeine-Free Energizing Daily powder helps you feel your best, starting with the very first morning
+                you take it. Our family and liver is packed with superfood benefits.
+              {% else %}
+                {{ product.description | truncate: 200 }}
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endcomment %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript for Functionality -->
+<script>
+  // Update quantity
+  function updateQuantity(change) {
+    const quantityInput = document.getElementById('quantity');
+    if (quantityInput) {
+      let currentValue = parseInt(quantityInput.value) || 1;
+      let newValue = currentValue + change;
+
+      if (newValue < 1) newValue = 1;
+      if (newValue > 10) newValue = 10;
+
+      quantityInput.value = newValue;
+
+      // Update hidden quantity inputs
+      document.querySelectorAll('.selected-quantity').forEach(input => {
+        input.value = newValue;
+      });
+    }
+  }
+
+  // Handle variant selection
+  document.addEventListener('DOMContentLoaded', function() {
+    const variantOptions = document.querySelectorAll('input[name="product-variant"]');
+    const priceDisplay = document.querySelector('.current-price');
+    const originalPriceDisplay = document.querySelector('.original-price');
+    const saveTextDisplay = document.querySelector('.save-text');
+
+    // Set initial variant
+    updateSelectedVariant();
+
+    variantOptions.forEach(option => {
+      option.addEventListener('change', function() {
+        updateSelectedVariant();
+        updatePriceDisplay(this);
+      });
+    });
+
+    function updateSelectedVariant() {
+      const selectedVariant = document.querySelector('input[name="product-variant"]:checked');
+      if (selectedVariant) {
+        document.querySelectorAll('.selected-variant-id').forEach(input => {
+          input.value = selectedVariant.value;
+        });
+      }
+    }
+
+    function updatePriceDisplay(selectedOption) {
+      const price = selectedOption.dataset.price;
+      const comparePrice = selectedOption.dataset.comparePrice;
+
+      if (priceDisplay && price) {
+        priceDisplay.textContent = '$' + price;
+      }
+
+      if (originalPriceDisplay && comparePrice && comparePrice > price) {
+        originalPriceDisplay.textContent = '$' + comparePrice;
+        originalPriceDisplay.style.display = 'inline';
+        if (saveTextDisplay) {
+          const savings = ((comparePrice - price) / comparePrice * 100).toFixed(0);
+          saveTextDisplay.textContent = 'Save ' + savings + '% Today!';
+          saveTextDisplay.style.display = 'inline';
+        }
+      } else {
+        if (originalPriceDisplay) originalPriceDisplay.style.display = 'none';
+        if (saveTextDisplay) saveTextDisplay.style.display = 'none';
+      }
+    }
+
+    // Update quantity inputs on load
+    const quantityInput = document.getElementById('quantity');
+    if (quantityInput) {
+      document.querySelectorAll('.selected-quantity').forEach(input => {
+        input.value = quantityInput.value;
+      });
+
+      quantityInput.addEventListener('change', function() {
+        document.querySelectorAll('.selected-quantity').forEach(input => {
+          input.value = this.value;
+        });
+      });
+    }
+  });
+
+  // Handle demo clicks
+  function handleDemoClick(event, buttonText) {
+    event.preventDefault();
+    alert('This is a demo of "' + buttonText + '". Please select a real product to enable purchasing.');
+    return false;
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Featured Product",
+  "settings": [
+    {
+      "type": "product",
+      "id": "featured_product",
+      "label": "Featured Product",
+      "info": "Leave blank to show demo content"
+    },
+    {
+      "type": "header",
+      "content": "Product Information"
+    },
+    {
+      "type": "text",
+      "id": "product_title",
+      "label": "Custom Product Title",
+      "info": "Leave blank to use product title"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "label": "Show Star Rating",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "review_count",
+      "label": "Review Count Text",
+      "default": "2,000+ Happy Customers"
+    },
+    {
+      "type": "header",
+      "content": "Sale Badge"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sale_badge",
+      "label": "Show Sale Badge",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Sale Badge Text",
+      "default": "NEW YEAR'S SALE"
+    },
+    {
+      "type": "header",
+      "content": "Product Features"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_features",
+      "label": "Show Features List",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "feature_1",
+      "label": "Feature 1",
+      "default": "Boosts metabolism within minutes to help you get back"
+    },
+    {
+      "type": "text",
+      "id": "feature_2",
+      "label": "Feature 2",
+      "default": "Healthy sustainable energy without the crash"
+    },
+    {
+      "type": "text",
+      "id": "feature_3",
+      "label": "Feature 3",
+      "default": "100% caffeine-free for optimal sleep & liver detox"
+    },
+    {
+      "type": "text",
+      "id": "feature_4",
+      "label": "Feature 4",
+      "default": "Our family and liver is packed with superfood benefits"
+    },
+    {
+      "type": "header",
+      "content": "Free Gifts Section"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_free_gifts",
+      "label": "Show Free Gifts Section",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "gifts_heading",
+      "label": "Gifts Section Heading",
+      "default": "You'll get these gifts:"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_gift_value",
+      "label": "Show Total Gift Value",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "gift_value",
+      "label": "Total Gift Value",
+      "default": "33"
+    },
+    {
+      "type": "header",
+      "content": "Purchase Options"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_quantity",
+      "label": "Show Quantity Selector",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "quantity_label",
+      "label": "Quantity Label",
+      "default": "Quantity:"
+    },
+    {
+      "type": "header",
+      "content": "Additional Information"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_additional_info",
+      "label": "Show Additional Info",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "shipping_text",
+      "label": "Shipping Info Text",
+      "default": "Free shipping on orders over $50"
+    },
+    {
+      "type": "text",
+      "id": "guarantee_text",
+      "label": "Guarantee Info Text",
+      "default": "30-day money-back guarantee"
+    },
+    {
+      "type": "header",
+      "content": "Guarantee Badge"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_guarantee",
+      "label": "Show Guarantee Badge",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "guarantee_title",
+      "label": "Guarantee Title",
+      "default": "OUR 100% HAPPINESS GUARANTEE"
+    },
+    {
+      "type": "textarea",
+      "id": "guarantee_description",
+      "label": "Guarantee Description",
+      "default": "If you're not completely satisfied, we'll refund your money."
+    },
+    {
+      "type": "header",
+      "content": "Customer Review Card"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_review",
+      "label": "Show Customer Review Card",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "review_title",
+      "label": "Review Title",
+      "default": "Amazing Results!"
+    },
+    {
+      "type": "textarea",
+      "id": "review_text",
+      "label": "Review Text",
+      "default": "This product has completely transformed my daily routine. Highly recommended!"
+    },
+    {
+      "type": "text",
+      "id": "reviewer_name",
+      "label": "Reviewer Name",
+      "default": "Sarah M."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "gift_item",
+      "name": "Gift Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "gift_image",
+          "label": "Gift Image"
+        },
+        {
+          "type": "text",
+          "id": "gift_title",
+          "label": "Gift Title",
+          "default": "Free Gift"
+        }
+      ]
+    },
+      {
+      "type": "variant_option",
+      "name": "Variant picker",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_unavailable_variants_indicator",
+          "label": "Show sold out and unavailable variants indicator",
+          "default": true
+        },
+        {
+          "type": "select",
+          "id": "option_type",
+          "label": "Option type",
+          "options": [
+            {
+              "value": "button",
+              "label": "Button"
+            },
+            {
+              "value": "dropdown",
+              "label": "Dropdown"
+            }
+          ],
+          "default": "button"
+        },
+        {
+          "type": "select",
+          "id": "color_option_type",
+          "label": "“Color” option type",
+          "options": [
+            {
+              "value": "button",
+              "label": "Button"
+            },
+            {
+              "value": "dropdown",
+              "label": "Dropdown"
+            },
+            {
+              "value": "swatch",
+              "label": "Swatch"
+            }
+          ],
+          "default": "swatch",
+          "info": "To display color swatches, [follow these guidelines](https://loess.ticksy.com/article/18636/)."
+        }
+      ]
+    },
+    {
+      "type": "buy_button",
+      "name": "Buy Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "ADD TO CART"
+        },
+        {
+          "type": "text",
+          "id": "button_subtitle",
+          "label": "Button Subtitle",
+          "placeholder": "Optional text below button"
+        },
+        {
+          "type": "select",
+          "id": "button_style",
+          "label": "Button Style",
+          "options": [
+            {"value": "primary", "label": "Primary (Green)"},
+            {"value": "secondary", "label": "Secondary (Outline)"},
+            {"value": "accent", "label": "Accent (Orange)"},
+            {"value": "dark", "label": "Dark"}
+          ],
+          "default": "primary"
+        },
+        {
+          "type": "select",
+          "id": "button_type",
+          "label": "Button Type",
+          "options": [
+            {"value": "add_to_cart", "label": "Add to Cart"},
+            {"value": "buy_now", "label": "Buy Now"},
+            {"value": "subscribe", "label": "Subscribe & Save"}
+          ],
+          "default": "add_to_cart"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_icon",
+          "label": "Show Button Icon",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "button_icon",
+          "label": "Button Icon",
+          "default": "🛒",
+          "info": "Emoji or symbol to show in button"
+        },
+        {
+      "type": "select",
+      "id": "style_class",
+      "label": "t:settings.style",
+      "options": [
+        {
+          "value": "button",
+          "label": "t:options.primary"
+        },
+        {
+          "value": "button-secondary",
+          "label": "t:options.secondary"
+        }
+      ],
+      "default": "button-secondary"
+    }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Product",
+      "category": "Product",
+      "blocks": [
+        {
+          "type": "gift_item",
+        },
+
+        {
+          "type": "buy_button",
+        },
+
+
+      ]
+    }
+  ]
+}
+{% endschema %}

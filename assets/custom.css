@@ -1,0 +1,94 @@
+/* .custom-font-size p {
+  font-weight: 600;
+  font-size: 14px;
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+} */
+div[ref="priceContainer"] .price {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.menu-list__link-title {
+  /* font-weight: 700; */
+  /* color: #121212; */
+}
+
+:is(
+    .menu-list:where(:has(.menu-list__list-item:hover)),
+    .menu-list:where(:has(.menu-list__list-item:focus-within)),
+    .menu-list:where(
+        :has(
+            .menu-list__list-item:not([aria-hidden="true"])
+              .menu-list__link--active
+          )
+      )
+  )
+  .menu-list__link {
+  /* color: #121212 !important; */
+}
+
+.menu-list__list-item {
+  margin-right: 10px;
+}
+.mega-menu__link--parent .mega-menu__link-title {
+  font-size: 16px !important;
+  font-weight: 600;
+}
+.mega-menu__link-title {
+  font-size: 14px;
+}
+.menu-list__link-title {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  padding-bottom: 4px; /* space for underline */
+}
+
+.menu-list__link-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 0;
+  background-color: #000; /* underline color */
+  transition: width 0.3s ease-in-out;
+  color: #000;
+}
+.menu-list__link-title:hover {
+  font-weight: 600;
+}
+
+.menu-list__link-title:hover::after {
+  width: 100%;
+}
+
+.mega-menu__link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  padding-bottom: 4px; /* space for underline */
+  color: #000; /* optional */
+
+  text-transform: inherit !important;
+}
+
+.mega-menu__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 0;
+  background-color: #000; /* underline color */
+  transition: width 0.3s ease-in-out;
+}
+.mega-menu__link:hover {
+  font-weight: 600; /* bold on hover */
+}
+.mega-menu__link:hover::after {
+  width: 100%;
+}
