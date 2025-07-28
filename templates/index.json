@@ -7,8 +7,6 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-
-
 {
   "sections": {
     "slideshow_gpeTLy": {
@@ -1574,6 +1572,44 @@
     "1753437846eefb0af6": {
       "type": "_blocks",
       "blocks": {
+        "ai_gen_block_70222ea_jKMLWp": {
+          "type": "ai_gen_block_70222ea",
+          "name": "Video Grid",
+          "settings": {
+            "heading": "Video Gallery",
+            "background_color": "#ffffff",
+            "text_color": "#000000",
+            "section_padding": 50,
+            "heading_size": 32,
+            "columns_desktop": "3",
+            "columns_mobile": "1",
+            "aspect_ratio": "16/9",
+            "grid_gap": 20,
+            "border_radius": 8,
+            "autoplay": false,
+            "muted": true,
+            "loop": true,
+            "overlay_opacity": 60,
+            "overlay_title_size": 18,
+            "overlay_text_size": 14,
+            "video_1": "shopify://files/videos/1fqy1o_1.mp4",
+            "video_1_title": "",
+            "video_1_description": "",
+            "video_2": "shopify://files/videos/1607973900288274432.mp4",
+            "video_2_title": "",
+            "video_2_description": "",
+            "video_3": "shopify://files/videos/1623971791599316992.mp4",
+            "video_3_title": "",
+            "video_3_description": "",
+            "video_4_title": "",
+            "video_4_description": "",
+            "video_5_title": "",
+            "video_5_description": "",
+            "video_6_title": "",
+            "video_6_description": ""
+          },
+          "blocks": {}
+        },
         "judge_me_reviews_featured_carousel_Fdm7Lb": {
           "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "disabled": true,
@@ -1583,6 +1619,7 @@
         }
       },
       "block_order": [
+        "ai_gen_block_70222ea_jKMLWp",
         "judge_me_reviews_featured_carousel_Fdm7Lb"
       ],
       "settings": {
