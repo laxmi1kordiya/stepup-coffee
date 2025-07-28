@@ -123,30 +123,33 @@
     }
   }
 {% endstyle %}
-
-<video-grid-{{ ai_gen_id }} class="ai-video-grid-{{ ai_gen_id }}" {{ section.shopify_attributes }}>
+<video-grid-{{ ai_gen_id }} class="ai-video-grid-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
   <div class="ai-video-grid-container-{{ ai_gen_id }}">
-    {% if section.settings.heading != blank %}
-      <h2 class="ai-video-grid-heading-{{ ai_gen_id }}">{{ section.settings.heading }}</h2>
-    {% endif %}
-    <div class="ai-video-grid-wrapper-{{ ai_gen_id }}">
-      {% for block in section.blocks %}
-        {% assign video = block.settings.video %}
-        {% assign title = block.settings.title %}
-        {% assign description = block.settings.description %}
+    {% if block.settings.heading != blank %}
+      <h2 class="ai-video-grid-heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+    {% endif %}<div class="ai-video-grid-wrapper-{{ ai_gen_id }}">
+      {% for i in (1..6) %}
+        {% liquid
+          assign video_key = 'video_' | append: i
+          assign title_key = 'video_' | append: i | append: '_title'
+          assign description_key = 'video_' | append: i | append: '_description'
+          assign video_file = block.settings[video_key]
+          assign title = block.settings[title_key]
+          assign description = block.settings[description_key]
+        %}
 
-        {% if video != blank %}
-          <div class="ai-video-item-{{ ai_gen_id }}">
-            {{ video | video_tag:
-              autoplay: section.settings.autoplay,
-              muted: section.settings.muted,
-              loop: section.settings.loop,
+        {% if video_file != blank %}
+          <div class="ai-video-item-{{ ai_gen_id }}" data-video-index="{{ i }}">
+            {{ video_file | video_tag: 
+              autoplay: block.settings.autoplay, 
+              muted: block.settings.muted, 
+              loop: block.settings.loop,
               controls: false,
               playsinline: true,
               preload: 'metadata'
             }}
 
-            {% unless section.settings.autoplay %}
+            {% unless block.settings.autoplay %}
               <button class="ai-video-play-button-{{ ai_gen_id }}" aria-label="Play video">
                 <svg viewBox="0 0 24 24" fill="currentColor">
                   <path d="M8 5v14l11-7z"/>
@@ -166,6 +169,14 @@
                 </div>
               </div>
             {% endif %}
+          </div>
+        {% elsif i <= 3 %}
+          <div class="ai-video-item-{{ ai_gen_id }}">
+            <div class="ai-video-placeholder-{{ ai_gen_id }}">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
+              </svg>
+            </div>
           </div>
         {% endif %}
       {% endfor %}
@@ -195,8 +206,7 @@
           if (video) {
             button.addEventListener('click', () => {
               this.pauseAllVideos();
-              video.play();
-              videoItem.classList.add('playing');
+              video.play();videoItem.classList.add('playing');
             });
 
             video.addEventListener('pause', () => {
@@ -209,8 +219,7 @@
 
             video.addEventListener('click', () => {
               if (video.paused) {
-                this.pauseAllVideos();
-                video.play();
+                this.pauseAllVideos();video.play();
                 videoItem.classList.add('playing');
               } else {
                 video.pause();
@@ -224,14 +233,25 @@
       pauseAllVideos() {
         const videos = this.querySelectorAll('video');
         const videoItems = this.querySelectorAll('.ai-video-item-{{ ai_gen_id }}');
-        videos.forEach(video => video.pause());
-        videoItems.forEach(item => item.classList.remove('playing'));
+
+        videos.forEach(video => {
+          if (!video.paused) {
+            video.pause();
+          }
+        });
+
+        videoItems.forEach(item => {
+          item.classList.remove('playing');
+        });
       }
     }
 
     customElements.define('video-grid-{{ ai_gen_id }}', VideoGrid{{ ai_gen_id }});
   })();
 </script>
+
+
+                  
 
 {% schema %}
 {
