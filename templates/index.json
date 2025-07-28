@@ -1565,6 +1565,44 @@
     "1753437846eefb0af6": {
       "type": "_blocks",
       "blocks": {
+        "ai_gen_block_70222ea_jKMLWp": {
+          "type": "ai_gen_block_70222ea",
+          "name": "Video Grid",
+          "settings": {
+            "heading": "Video Gallery",
+            "background_color": "#ffffff",
+            "text_color": "#000000",
+            "section_padding": 50,
+            "heading_size": 32,
+            "columns_desktop": "3",
+            "columns_mobile": "1",
+            "aspect_ratio": "16/9",
+            "grid_gap": 20,
+            "border_radius": 8,
+            "autoplay": true,
+            "muted": true,
+            "loop": true,
+            "overlay_opacity": 60,
+            "overlay_title_size": 18,
+            "overlay_text_size": 14,
+            "video_1": "shopify://files/videos/1fqy1o_1.mp4",
+            "video_1_title": "",
+            "video_1_description": "",
+            "video_2": "shopify://files/videos/1607973900288274432.mp4",
+            "video_2_title": "",
+            "video_2_description": "",
+            "video_3": "shopify://files/videos/1623971791599316992.mp4",
+            "video_3_title": "",
+            "video_3_description": "",
+            "video_4_title": "",
+            "video_4_description": "",
+            "video_5_title": "",
+            "video_5_description": "",
+            "video_6_title": "",
+            "video_6_description": ""
+          },
+          "blocks": {}
+        },
         "judge_me_reviews_featured_carousel_Fdm7Lb": {
           "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "disabled": true,
@@ -1574,6 +1612,7 @@
         }
       },
       "block_order": [
+        "ai_gen_block_70222ea_jKMLWp",
         "judge_me_reviews_featured_carousel_Fdm7Lb"
       ],
       "settings": {
@@ -1715,6 +1754,65 @@
         "padding-block-start": 40,
         "padding-block-end": 40
       }
+    },
+    "section_99ai7q": {
+      "type": "section",
+      "blocks": {
+        "video_9T68WU": {
+          "type": "video",
+          "name": "t:names.video",
+          "settings": {
+            "source": "uploaded",
+            "video": "shopify://files/videos/2182228_Thermos_Vacuum Flask_3840x2160.mp4",
+            "video_autoplay": true,
+            "video_loop": true,
+            "alt": "",
+            "custom_width": 100,
+            "custom_width_mobile": 100,
+            "aspect_ratio": "16/9",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "video_9T68WU"
+      ],
+      "name": "t:names.video_section",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 16,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 32,
+        "padding-block-end": 32
+      }
     }
   },
   "order": [
@@ -1726,6 +1824,7 @@
     "1753436868c1f09384",
     "section_XXxeMB",
     "1753437846eefb0af6",
-    "section_H8A87k"
+    "section_H8A87k",
+    "section_99ai7q"
   ]
 }
