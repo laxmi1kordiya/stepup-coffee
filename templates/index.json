@@ -1722,50 +1722,6 @@
         "padding-block-start": 40,
         "padding-block-end": 40
       }
-    },
-    "video_slider_RRmWCa": {
-      "type": "video-slider",
-      "blocks": {
-        "carousel_video_Gpk6TB": {
-          "type": "carousel_video",
-          "settings": {
-            "media": "https://cdn.shopify.com/videos/c/o/v/02a4d36a72c04cc4bf1b53cff7211ce7.mp4"
-          }
-        },
-        "carousel_video_rkXiMH": {
-          "type": "carousel_video",
-          "settings": {
-            "media": "https://cdn.shopify.com/videos/c/o/v/2f512ee3667948ed82fd64007400d5e3.mp4"
-          }
-        }
-      },
-      "block_order": [
-        "carousel_video_Gpk6TB",
-        "carousel_video_rkXiMH"
-      ],
-      "name": "Videos Slider",
-      "settings": {
-        "section_heading": "Videos Slider",
-        "heading_alignment": "center",
-        "heading_size": "medium",
-        "full_width": false,
-        "section_bg_color": "#ffffff",
-        "section_padding_top": 40,
-        "section_padding_bottom": 40,
-        "auto_slide": true,
-        "auto_slide_speed": 6000,
-        "show_arrows": true,
-        "arrow_shape": "circle",
-        "arrow_bg_color": "#000000",
-        "visible_slides": 3,
-        "visible_mobile": 1,
-        "image_shape": "square",
-        "image_size": "small",
-        "media_size": "medium",
-        "media_design": "adapt",
-        "media_shadow": false,
-        "testimonial_name_size": 20
-      }
     }
   },
   "order": [
@@ -1777,7 +1733,6 @@
     "1753436868c1f09384",
     "section_XXxeMB",
     "1753437846eefb0af6",
-    "section_H8A87k",
-    "video_slider_RRmWCa"
+    "section_H8A87k"
   ]
 }
