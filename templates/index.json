@@ -1722,77 +1722,6 @@
         "padding-block-start": 40,
         "padding-block-end": 40
       }
-    },
-    "17536969059bac8511": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_9e90d87_PteADT": {
-          "type": "ai_gen_block_9e90d87",
-          "settings": {
-            "slider_height": 400,
-            "slides_per_view": "50",
-            "slides_per_view_mobile": "100",
-            "slide_spacing": 10,
-            "autoplay": false,
-            "autoplay_delay": 2,
-            "loop": true,
-            "muted": true,
-            "loop_individual": true,
-            "show_navigation": false,
-            "show_dots": false,
-            "background_color": "#ffffff",
-            "nav_button_color": "#ffffff",
-            "nav_button_icon_color": "#000000",
-            "nav_button_hover_color": "#f0f0f0",
-            "dot_color": "#cccccc",
-            "dot_active_color": "#ffffff",
-            "title_color": "#ffffff",
-            "border_radius": 8,
-            "video_border_radius": 4,
-            "title_size": 18,
-            "video_1": "shopify://files/videos/68bc749b-8431-4dbb-b5ab-08c93c63c619.mp4",
-            "video_title_1": "",
-            "video_2": "shopify://files/videos/invideo-ai-1080 Eco-Friendly Bamboo Coffee Cup_ Stylish  2024-10-26.mp4",
-            "video_title_2": "",
-            "video_3": "shopify://files/videos/invideo-ai-1080 Revolutionize Your Coffee Game with This 2024-09-19.mp4",
-            "video_title_3": "",
-            "video_title_4": "",
-            "video_title_5": "",
-            "video_title_6": ""
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_9e90d87_PteADT"
-      ],
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
     }
   },
   "order": [
@@ -1804,7 +1733,6 @@
     "1753436868c1f09384",
     "section_XXxeMB",
     "1753437846eefb0af6",
-    "section_H8A87k",
-    "17536969059bac8511"
+    "section_H8A87k"
   ]
 }
