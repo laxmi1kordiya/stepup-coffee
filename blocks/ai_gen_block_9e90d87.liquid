@@ -392,6 +392,22 @@
               this.resumeAutoplay();
             });
 
+            // Add loading spinner
+            const loadingSpinner = document.createElement('div');
+            loadingSpinner.classList.add(`ai-video-slider__loading-spinner-{{ ai_gen_id }}`);
+            slide.querySelector(`.ai-video-slider__video-wrapper-{{ ai_gen_id }}`).appendChild(loadingSpinner);
+
+            // Handle video loading states
+            video.addEventListener('loadstart', () => {
+              loadingSpinner.classList.remove('hidden');
+              video.classList.remove('loaded');
+            });
+
+            video.addEventListener('canplay', () => {
+              loadingSpinner.classList.add('hidden');
+              video.classList.add('loaded');
+            });
+
             video.addEventListener('click', () => {
               if (!video.paused) {
                 video.pause();
