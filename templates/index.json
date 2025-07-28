@@ -1726,15 +1726,15 @@
     "video_slider_HaGtG4": {
       "type": "video-slider",
       "blocks": {
-        "carousel_video_VdLGpj": {
+        "carousel_video_Jpjfxq": {
           "type": "carousel_video",
           "settings": {
-            "media": "https://cdn.shopify.com/videos/c/o/v/2f512ee3667948ed82fd64007400d5e3.mp4"
+            "media": "shopify://files/videos/4786576-hd_1920_1080_25fps-stepup.mp4"
           }
         }
       },
       "block_order": [
-        "carousel_video_VdLGpj"
+        "carousel_video_Jpjfxq"
       ],
       "name": "Videos Slider",
       "settings": {
