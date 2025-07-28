@@ -16,8 +16,8 @@
           "type": "_slide",
           "settings": {
             "media_type_1": "video",
-            "image_1": "shopify:\/\/shop_images\/OPTIMIZE_BACKUP_PRODUCT_image-from-rawpixel-id-1206646-jpeg_1.jpg",
-            "video_1": "shopify:\/\/files\/videos\/4786576-hd_1920_1080_25fps-stepup.mp4",
+            "image_1": "shopify://shop_images/OPTIMIZE_BACKUP_PRODUCT_image-from-rawpixel-id-1206646-jpeg_1.jpg",
+            "video_1": "shopify://files/videos/4786576-hd_1920_1080_25fps-stepup.mp4",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -79,7 +79,7 @@
                 "text_T9UDGw": {
                   "type": "text",
                   "settings": {
-                    "text": "<h3>Thoughtful  Days<\/h3>",
+                    "text": "<h3>Thoughtful  Days</h3>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -104,7 +104,7 @@
                 "text_GkncdK": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Start with Fresh coffee<\/p>",
+                    "text": "<p>Start with Fresh coffee</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -130,7 +130,7 @@
                   "type": "button",
                   "settings": {
                     "label": "Learn More",
-                    "link": "shopify:\/\/collections\/all",
+                    "link": "shopify://collections/all",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "width": "fit-content",
@@ -218,7 +218,7 @@
                 "text_VFrafz": {
                   "type": "text",
                   "settings": {
-                    "text": "<h2>Bestsellers<\/h2>",
+                    "text": "<h2>Bestsellers</h2>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -243,7 +243,7 @@
                 "text_cMwMCg": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Discover the bestsellers that have captured the hearts of our customers with their perfect blend of functionality and style.<\/p>",
+                    "text": "<p>Discover the bestsellers that have captured the hearts of our customers with their perfect blend of functionality and style.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -269,7 +269,7 @@
                   "type": "button",
                   "settings": {
                     "label": "Shop now",
-                    "link": "shopify:\/\/collections\/all",
+                    "link": "shopify://collections/all",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "width": "fit-content",
@@ -436,7 +436,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<h3><strong>Best Sellers<\/strong><\/h3>",
+                "text": "<h3><strong>Best Sellers</strong></h3>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -686,7 +686,7 @@
               "type": "icon",
               "settings": {
                 "icon": "eye",
-                "image_upload": "shopify:\/\/shop_images\/icon-1_89933f3b-30b8-4c7c-bcaa-cee7ab8aea6f.png",
+                "image_upload": "shopify://shop_images/icon-1_89933f3b-30b8-4c7c-bcaa-cee7ab8aea6f.png",
                 "width": 48,
                 "link": "",
                 "open_in_new_tab": false
@@ -734,7 +734,7 @@
                 "text_iKEepa": {
                   "type": "text",
                   "settings": {
-                    "text": "<h2><strong>Intentional design<\/strong><\/h2>",
+                    "text": "<h2><strong>Intentional design</strong></h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -759,7 +759,7 @@
                 "text_ijQ7Pg": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Everything we do starts with why<\/p>",
+                    "text": "<p>Everything we do starts with why</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -835,7 +835,7 @@
               "type": "icon",
               "settings": {
                 "icon": "heart",
-                "image_upload": "shopify:\/\/shop_images\/icon-3_03cdf1dd-5f5c-4042-9dc2-b40d9594ab27.png",
+                "image_upload": "shopify://shop_images/icon-3_03cdf1dd-5f5c-4042-9dc2-b40d9594ab27.png",
                 "width": 48,
                 "link": "",
                 "open_in_new_tab": false
@@ -883,7 +883,7 @@
                 "text_6gemVm": {
                   "type": "text",
                   "settings": {
-                    "text": "<h2><strong>Made with care<\/strong><\/h2>",
+                    "text": "<h2><strong>Made with care</strong></h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -908,7 +908,7 @@
                 "text_VfJz7w": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>We believe in building better<\/p>",
+                    "text": "<p>We believe in building better</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -984,7 +984,7 @@
               "type": "icon",
               "settings": {
                 "icon": "silhouette",
-                "image_upload": "shopify:\/\/shop_images\/icon-2_c7334dbb-cf55-44fd-ad07-4b48c51ebdf5.png",
+                "image_upload": "shopify://shop_images/icon-2_c7334dbb-cf55-44fd-ad07-4b48c51ebdf5.png",
                 "width": 48,
                 "link": "",
                 "open_in_new_tab": false
@@ -1032,7 +1032,7 @@
                 "text_QKAhUB": {
                   "type": "text",
                   "settings": {
-                    "text": "<h2><strong>A team with a goal<\/strong><\/h2>",
+                    "text": "<h2><strong>A team with a goal</strong></h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1057,7 +1057,7 @@
                 "text_cK4int": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Real people making great products<\/p>",
+                    "text": "<p>Real people making great products</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1135,7 +1135,7 @@
               "name": "t:names.icon",
               "settings": {
                 "icon": "price_tag",
-                "image_upload": "shopify:\/\/shop_images\/icon-4_66e9978e-8627-4604-83ee-a2e06005a5c7.png",
+                "image_upload": "shopify://shop_images/icon-4_66e9978e-8627-4604-83ee-a2e06005a5c7.png",
                 "width": 48,
                 "link": "",
                 "open_in_new_tab": false
@@ -1185,7 +1185,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<h2><strong>A team with a goal<\/strong><\/h2>",
+                    "text": "<h2><strong>A team with a goal</strong></h2>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -1211,7 +1211,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Real people making great products<\/p>",
+                    "text": "<p>Real people making great products</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -1445,7 +1445,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2><em><strong>New to Specialty Coffee?<\/strong><\/em><\/h2>",
+                "text": "<h2><em><strong>New to Specialty Coffee?</strong></em></h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -1470,7 +1470,7 @@
             "text_97MFif": {
               "type": "text",
               "settings": {
-                "text": "<p>Let's start brewing! Check beginner-friendly products to get started.<\/p>",
+                "text": "<p>Let's start brewing! Check beginner-friendly products to get started.</p>",
                 "width": "fit-content",
                 "max_width": "narrow",
                 "alignment": "left",
@@ -1496,7 +1496,7 @@
               "type": "button",
               "settings": {
                 "label": "learn more",
-                "link": "shopify:\/\/collections\/all",
+                "link": "shopify://collections/all",
                 "open_in_new_tab": false,
                 "style_class": "button",
                 "width": "fit-content",
@@ -1516,7 +1516,7 @@
         "image_M4ynjP": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/NewToCoffee.webp",
+            "image": "shopify://shop_images/NewToCoffee.webp",
             "link": "",
             "image_ratio": "landscape",
             "width": "fill",
@@ -1573,7 +1573,7 @@
       "type": "_blocks",
       "blocks": {
         "judge_me_reviews_featured_carousel_Fdm7Lb": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "disabled": true,
           "settings": {
             "maxwidth": 1000
@@ -1618,7 +1618,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<h2><strong>Subscribe to our emails<\/strong><\/h2>",
+            "text": "<h2><strong>Subscribe to our emails</strong></h2>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -1643,7 +1643,7 @@
         "text_hJPFcL": {
           "type": "text",
           "settings": {
-            "text": "<p>Be the first to know about new collections and special offers. <\/p>",
+            "text": "<p>Be the first to know about new collections and special offers. </p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -1722,6 +1722,59 @@
         "padding-block-start": 40,
         "padding-block-end": 40
       }
+    },
+    "video_grid_TeTdGT": {
+      "type": "video-grid",
+      "blocks": {
+        "video_item_8UG6Vt": {
+          "type": "video_item",
+          "settings": {
+            "video": "shopify://files/videos/2182228_Thermos_Vacuum Flask_3840x2160.mp4",
+            "title": "",
+            "description": ""
+          }
+        },
+        "video_item_pxXT4F": {
+          "type": "video_item",
+          "settings": {
+            "video": "shopify://files/videos/1623971791599316992.mp4",
+            "title": "",
+            "description": ""
+          }
+        },
+        "video_item_gxTKCG": {
+          "type": "video_item",
+          "settings": {
+            "video": "shopify://files/videos/1fqy1o_1.mp4",
+            "title": "",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "video_item_8UG6Vt",
+        "video_item_pxXT4F",
+        "video_item_gxTKCG"
+      ],
+      "name": "Video Grid",
+      "settings": {
+        "heading": "Video Gallery",
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "section_padding": 50,
+        "heading_size": 32,
+        "columns_desktop": "3",
+        "columns_mobile": "1",
+        "aspect_ratio": "16/9",
+        "grid_gap": 20,
+        "border_radius": 8,
+        "autoplay": false,
+        "muted": true,
+        "loop": true,
+        "overlay_opacity": 60,
+        "overlay_title_size": 18,
+        "overlay_text_size": 14
+      }
     }
   },
   "order": [
@@ -1733,6 +1786,7 @@
     "1753436868c1f09384",
     "section_XXxeMB",
     "1753437846eefb0af6",
-    "section_H8A87k"
+    "section_H8A87k",
+    "video_grid_TeTdGT"
   ]
 }
