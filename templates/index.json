@@ -1757,7 +1757,7 @@
         "show_arrows": true,
         "arrow_shape": "circle",
         "arrow_bg_color": "#000000",
-        "visible_slides": 2,
+        "visible_slides": 3,
         "visible_mobile": 1,
         "image_shape": "square",
         "image_size": "small",
