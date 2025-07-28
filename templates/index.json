@@ -1723,41 +1723,76 @@
         "padding-block-end": 40
       }
     },
-    "video_slider_HaGtG4": {
-      "type": "video-slider",
+    "1753705536e2b2e153": {
+      "type": "_blocks",
       "blocks": {
-        "carousel_video_Jpjfxq": {
-          "type": "carousel_video",
+        "ai_gen_block_70222ea_W3CRyk": {
+          "type": "ai_gen_block_70222ea",
           "settings": {
-            "media": "shopify://files/videos/4786576-hd_1920_1080_25fps-stepup.mp4"
-          }
+            "heading": "Video Gallery",
+            "background_color": "#ffffff",
+            "text_color": "#000000",
+            "section_padding": 50,
+            "heading_size": 32,
+            "columns_desktop": "3",
+            "columns_mobile": "1",
+            "aspect_ratio": "16/9",
+            "grid_gap": 20,
+            "border_radius": 8,
+            "autoplay": false,
+            "muted": true,
+            "loop": true,
+            "overlay_opacity": 60,
+            "overlay_title_size": 18,
+            "overlay_text_size": 14,
+            "video_1": "shopify://files/videos/video (6).mp4",
+            "video_1_title": "",
+            "video_1_description": "",
+            "video_2": "shopify://files/videos/invideo-ai-1080 Eco-Friendly Bamboo Coffee Cup_ Stylish  2024-10-26.mp4",
+            "video_2_title": "",
+            "video_2_description": "",
+            "video_3": "shopify://files/videos/4786576-hd_1920_1080_25fps-stepup.mp4",
+            "video_3_title": "",
+            "video_3_description": "",
+            "video_4_title": "",
+            "video_4_description": "",
+            "video_5_title": "",
+            "video_5_description": "",
+            "video_6_title": "",
+            "video_6_description": ""
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "carousel_video_Jpjfxq"
+        "ai_gen_block_70222ea_W3CRyk"
       ],
-      "name": "Videos Slider",
       "settings": {
-        "section_heading": "Videos Slider",
-        "heading_alignment": "center",
-        "heading_size": "medium",
-        "full_width": false,
-        "section_bg_color": "#ffffff",
-        "section_padding_top": 40,
-        "section_padding_bottom": 40,
-        "auto_slide": true,
-        "auto_slide_speed": 6000,
-        "show_arrows": true,
-        "arrow_shape": "circle",
-        "arrow_bg_color": "#000000",
-        "visible_slides": 4,
-        "visible_mobile": 1,
-        "image_shape": "circle",
-        "image_size": "small",
-        "media_size": "medium",
-        "media_design": "adapt",
-        "media_shadow": false,
-        "testimonial_name_size": 20
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
       }
     }
   },
@@ -1771,6 +1806,6 @@
     "section_XXxeMB",
     "1753437846eefb0af6",
     "section_H8A87k",
-    "video_slider_HaGtG4"
+    "1753705536e2b2e153"
   ]
 }
