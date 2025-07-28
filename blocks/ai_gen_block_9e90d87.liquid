@@ -61,7 +61,38 @@
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease-in-out;
+    opacity: 0;
+  }
+
+  .ai-video-slider__video-{{ ai_gen_id }}.loaded {
+    opacity: 1;
+  }
+
+  .ai-video-slider__loading-spinner-{{ ai_gen_id }} {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #ffffff;
+    animation: ai-spinner-{{ ai_gen_id }} 1s linear infinite;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+
+  .ai-video-slider__loading-spinner-{{ ai_gen_id }}.hidden {
+    opacity: 0;
+  }
+
+  @keyframes ai-spinner-{{ ai_gen_id }} {
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
   }
 
   .ai-video-slider__video-wrapper-{{ ai_gen_id }}:hover .ai-video-slider__video-{{ ai_gen_id }} {
