@@ -1586,7 +1586,7 @@
             "aspect_ratio": "16/9",
             "grid_gap": 20,
             "border_radius": 8,
-            "autoplay": false,
+            "autoplay": true,
             "muted": true,
             "loop": true,
             "overlay_opacity": 60,
