@@ -13,12 +13,15 @@
     overflow: hidden;
     background-color: {{ block.settings.background_color }};
     border-radius: {{ block.settings.border_radius }}px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
   }
 
   .ai-video-slider__container-{{ ai_gen_id }} {
     position: relative;
     width: 100%;
     height: {{ block.settings.slider_height }}px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.02), rgba(0,0,0,0.05));
   }
 
   .ai-video-slider__track-{{ ai_gen_id }} {
