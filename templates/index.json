@@ -7,6 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
+
 {
   "sections": {
     "slideshow_gpeTLy": {
@@ -1722,59 +1723,6 @@
         "padding-block-start": 40,
         "padding-block-end": 40
       }
-    },
-    "video_grid_TeTdGT": {
-      "type": "video-grid",
-      "blocks": {
-        "video_item_8UG6Vt": {
-          "type": "video_item",
-          "settings": {
-            "video": "shopify://files/videos/2182228_Thermos_Vacuum Flask_3840x2160.mp4",
-            "title": "",
-            "description": ""
-          }
-        },
-        "video_item_pxXT4F": {
-          "type": "video_item",
-          "settings": {
-            "video": "shopify://files/videos/1623971791599316992.mp4",
-            "title": "",
-            "description": ""
-          }
-        },
-        "video_item_gxTKCG": {
-          "type": "video_item",
-          "settings": {
-            "video": "shopify://files/videos/1fqy1o_1.mp4",
-            "title": "",
-            "description": ""
-          }
-        }
-      },
-      "block_order": [
-        "video_item_8UG6Vt",
-        "video_item_pxXT4F",
-        "video_item_gxTKCG"
-      ],
-      "name": "Video Grid",
-      "settings": {
-        "heading": "Video Gallery",
-        "background_color": "#ffffff",
-        "text_color": "#000000",
-        "section_padding": 50,
-        "heading_size": 32,
-        "columns_desktop": "3",
-        "columns_mobile": "1",
-        "aspect_ratio": "16/9",
-        "grid_gap": 20,
-        "border_radius": 8,
-        "autoplay": false,
-        "muted": true,
-        "loop": true,
-        "overlay_opacity": 60,
-        "overlay_title_size": 18,
-        "overlay_text_size": 14
-      }
     }
   },
   "order": [
@@ -1786,7 +1734,6 @@
     "1753436868c1f09384",
     "section_XXxeMB",
     "1753437846eefb0af6",
-    "section_H8A87k",
-    "video_grid_TeTdGT"
+    "section_H8A87k"
   ]
 }
