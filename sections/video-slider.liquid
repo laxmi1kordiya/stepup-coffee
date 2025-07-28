@@ -93,22 +93,20 @@
       <h2 class="section-heading">{{ section.settings.section_heading }}</h2>
     {% endif %}
     <div class="mixed-media-carousel-wrapper">
-      {% if section.settings.show_arrows %}
+      {% if section.settings.show_arrows and section.blocks.size > 1 %}
         <button class="arrow left-arrow">❮</button>
       {% endif %}
       <div class="mixed-media-carousel-slider">
         <div class="slider-track">
           {%- comment -%}
-            Clone the last {{ cloneCount }} blocks for seamless looping.
+            Clone the last {{ cloneCount }} blocks for seamless looping (only if more than 1 video).
           {%- endcomment -%}
           {% assign total = section.blocks.size %}
-          {% if total > 0 %}
+          {% if total > 1 %}
             {% assign offset_value = total | minus: cloneCount %}
             {% for block in section.blocks limit: cloneCount offset: offset_value %}
               <div class="slide clone" {% if section.settings.media_shadow %}style="box-shadow: 0 4px 8px rgba(0,0,0,0.2);" {% endif %}>
-                {% if block.type == "carousel_image" %}
-                  <img class="media-element" src="{{ block.settings.media | img_url: section.settings.media_size }}" alt="Carousel Image">
-                {% elsif block.type == "carousel_video" %}
+                {% if block.type == "carousel_video" and block.settings.media != blank %}
                   <video class="media-element" controls muted autoplay loop>
                     <source src="{{ block.settings.media }}">
                      
@@ -116,28 +114,26 @@
                 {% endif %}
               </div>
             {% endfor %}
-            {%- comment -%}
-              Real blocks.
-            {%- endcomment -%}
-            {% for block in section.blocks %}
-              <div class="slide" {% if section.settings.media_shadow %}style="box-shadow: 0 4px 8px rgba(0,0,0,0.2);" {% endif %}>
-                {% if block.type == "carousel_image" %}
-                  <img class="media-element" src="{{ block.settings.media | img_url: section.settings.media_size }}" alt="Carousel Image">
-                {% elsif block.type == "carousel_video" %}
-                  <video class="media-element" controls muted autoplay loop>
-                    <source src="{{ block.settings.media }}">
-                  </video>
-                {% endif %}
-              </div>
-            {% endfor %}
-            {%- comment -%}
-              Clone the first {{ cloneCount }} blocks for seamless looping.
-            {%- endcomment -%}
+          {% endif %}
+          {%- comment -%}
+            Real blocks.
+          {%- endcomment -%}
+          {% for block in section.blocks %}
+            <div class="slide" {% if section.settings.media_shadow %}style="box-shadow: 0 4px 8px rgba(0,0,0,0.2);" {% endif %}>
+              {% if block.type == "carousel_video" and block.settings.media != blank %}
+                <video class="media-element" controls muted autoplay loop>
+                  <source src="{{ block.settings.media }}">
+                </video>
+              {% endif %}
+            </div>
+          {% endfor %}
+          {%- comment -%}
+            Clone the first {{ cloneCount }} blocks for seamless looping (only if more than 1 video).
+          {%- endcomment -%}
+          {% if total > 1 %}
             {% for block in section.blocks limit: cloneCount %}
               <div class="slide clone" {% if section.settings.media_shadow %}style="box-shadow: 0 4px 8px rgba(0,0,0,0.2);" {% endif %}>
-                {% if block.type == "carousel_image" %}
-                  <img class="media-element" src="{{ block.settings.media | img_url: section.settings.media_size }}" alt="Carousel Image">
-                {% elsif block.type == "carousel_video" %}
+                {% if block.type == "carousel_video" and block.settings.media != blank %}
                   <video class="media-element" controls>
                     <source src="{{ block.settings.media }}">
                   </video>
@@ -147,7 +143,7 @@
           {% endif %}
         </div>
       </div>
-      {% if section.settings.show_arrows %}
+      {% if section.settings.show_arrows and section.blocks.size > 1 %}
         <button class="arrow right-arrow">❯</button>
       {% endif %}
     </div>
@@ -161,6 +157,11 @@ document.addEventListener("DOMContentLoaded", function() {
   var sliderTrack = container.querySelector(".slider-track");
   var slides = container.querySelectorAll(".slide");
   if (slides.length === 0) return;
+  
+  // If only one slide, disable carousel functionality
+  if (slides.length === 1) {
+    return;
+  }
   
   var gap = 15;
   // Determine number of visible slides based on viewport width:
@@ -217,11 +218,12 @@ document.addEventListener("DOMContentLoaded", function() {
   
   var autoplay = {{ section.settings.auto_slide | json }};
   var autoplaySpeed = {{ section.settings.auto_slide_speed | json }};
-  if (autoplay) {
+  if (autoplay && slides.length > 1) {
     setInterval(nextSlide, autoplaySpeed);
   }
   
   window.addEventListener("resize", function() {
+    if (slides.length <= 1) return;
     visibleSlides = window.innerWidth <= 767 ? {{ section.settings.visible_mobile }} : {{ section.settings.visible_slides }};
     slideWidth = container.querySelector(".mixed-media-carousel-slider").offsetWidth / visibleSlides;
     sliderTrack.style.transition = "none";
@@ -232,13 +234,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 {% schema %}
 {
-  "name": "Videos Slider",
+  "name": "Video Slider",
   "settings": [
     {
       "type": "text",
       "id": "section_heading",
       "label": "Section Heading",
-      "default": "Videos Slider"
+      "default": "Video Slider"
     },
     {
       "type": "select",
@@ -296,7 +298,7 @@ document.addEventListener("DOMContentLoaded", function() {
       "type": "checkbox",
       "id": "auto_slide",
       "label": "Enable Auto Slide",
-      "default": true
+      "default": false
     },
     {
       "type": "range",
@@ -311,7 +313,7 @@ document.addEventListener("DOMContentLoaded", function() {
       "type": "checkbox",
       "id": "show_arrows",
       "label": "Show Left/Right Arrows",
-      "default": true
+      "default": false
     },
     {
       "type": "select",
@@ -336,7 +338,7 @@ document.addEventListener("DOMContentLoaded", function() {
       "min": 1,
       "max": 8,
       "step": 1,
-      "default": 4
+      "default": 1
     },
     {
       "type": "range",
@@ -349,28 +351,8 @@ document.addEventListener("DOMContentLoaded", function() {
     },
     {
       "type": "select",
-      "id": "image_shape",
-      "label": "Image Shape (for testimonials)",
-      "options": [
-        { "value": "circle", "label": "Circle" },
-        { "value": "square", "label": "Square" }
-      ],
-      "default": "circle"
-    },
-    {
-      "type": "select",
-      "id": "image_size",
-      "label": "Image Size (for testimonials)",
-      "options": [
-        { "value": "small", "label": "Small" },
-        { "value": "big", "label": "Big" }
-      ],
-      "default": "small"
-    },
-    {
-      "type": "select",
       "id": "media_size",
-      "label": "Media Size (for images/videos)",
+      "label": "Media Size (for videos)",
       "options": [
         { "value": "small", "label": "Small" },
         { "value": "medium", "label": "Medium" },
@@ -394,35 +376,30 @@ document.addEventListener("DOMContentLoaded", function() {
       "id": "media_shadow",
       "label": "Enable Media Shadow",
       "default": false
-    },
-    {
-      "type": "range",
-      "id": "testimonial_name_size",
-      "label": "Testimonial Name Font Size (px)",
-      "min": 12,
-      "max": 36,
-      "step": 1,
-      "default": 20
     }
   ],
   "blocks": [
-
     {
       "type": "carousel_video",
-      "name": "Carousel Video",
+      "name": "Video",
       "settings": [
         {
-          "type": "url",
+          "type": "video",
           "id": "media",
-          "label": "Video URL"
+          "label": "Upload Video File"
         }
       ]
     }
   ],
-  "max_blocks": 10,
+  "max_blocks": 1,
   "presets": [
     {
-      "name": "Videos Slider"
+      "name": "Video Slider",
+      "blocks": [
+        {
+          "type": "carousel_video"
+        }
+      ]
     }
   ]
 }
