@@ -92,3 +92,7 @@ div[ref="priceContainer"] .price {
 .mega-menu__link:hover::after {
   width: 100%;
 }
+.product-card:hover {
+    box-shadow: 0 10px 20px #0000001f, 0 6px 6px #00000014;
+    transform: translateY(-4px);
+}
