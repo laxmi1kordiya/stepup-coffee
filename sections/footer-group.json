@@ -205,7 +205,7 @@
                   "type": "menu",
                   "name": "t:names.menu",
                   "settings": {
-                    "menu": "main-menu",
+                    "menu": "footer",
                     "heading": "shop",
                     "menu_spacing": 12,
                     "show_as_accordion": false,
