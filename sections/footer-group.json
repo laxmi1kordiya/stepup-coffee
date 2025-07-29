@@ -183,7 +183,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h3>Sign up for our newsletter</h3>",
+                    "text": "<h2><strong>newsletter</strong></h2>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
