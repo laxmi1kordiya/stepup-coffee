@@ -1340,7 +1340,7 @@
             "heading": "Shop by Category",
             "tab_alignment": "flex-start",
             "columns_desktop": 5,
-            "columns_mobile": "3",
+            "columns_mobile": "2",
             "grid_gap": 80,
             "image_shape": "round",
             "image_border_radius": 8,
