@@ -35,7 +35,8 @@
         --spacing--size: {{ block.settings.menu_spacing }}px;
         {% render 'spacing-style', settings: block.settings %}
       "
-      {{ block.shopify_attributes }}
+      {{ block.shopify_attributes | default: 'open' }}
+
     >
       <summary class="menu__heading{% if heading == blank %} menu__heading--empty{% endif %} {{ block.settings.heading_preset }}">
         <span class="menu__heading__default">{{ heading }}</span>
