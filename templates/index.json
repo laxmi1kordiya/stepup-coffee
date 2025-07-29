@@ -1612,18 +1612,10 @@
             "video_6_description": ""
           },
           "blocks": {}
-        },
-        "judge_me_reviews_featured_carousel_Fdm7Lb": {
-          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "disabled": true,
-          "settings": {
-            "maxwidth": 1000
-          }
         }
       },
       "block_order": [
-        "ai_gen_block_70222ea_jKMLWp",
-        "judge_me_reviews_featured_carousel_Fdm7Lb"
+        "ai_gen_block_70222ea_jKMLWp"
       ],
       "settings": {
         "content_direction": "column",
