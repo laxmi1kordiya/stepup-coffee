@@ -620,7 +620,6 @@
           ]
         }
       },
-      "disabled": true,
       "name": "t:names.products_carousel",
       "settings": {
         "collection": "coffee-tables",
@@ -1301,7 +1300,6 @@
       "block_order": [
         "buy_button_Va9Nwq"
       ],
-      "disabled": true,
       "name": "Featured Product",
       "settings": {
         "featured_product": "coffee-beans-dose-trays-pure-wood-smooth-teaspoon-tea-separator-vessel-tools-coffee-bean-spoon-shovel-tea-trays-dosing-cup",
