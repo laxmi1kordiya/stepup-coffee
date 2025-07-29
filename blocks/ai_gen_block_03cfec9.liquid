@@ -125,37 +125,29 @@
     }
   }
 
-{% if section.settings.mobile_layout == 'scroll' %}
-<style>
   @media screen and (max-width: 768px) {
-    .ai-collections-grid__grid-{{ section.id }} {
-      display: flex;
+  .ai-collections-grid__grid-{{ ai_gen_id }} {
+    {% if block.settings.mobile_layout == 'scroll' %}
+     display: flex;
       flex-wrap: nowrap;
       overflow-x: auto;
       gap: 16px;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
     }
-
-    .ai-collections-grid__item-{{ section.id }} {
-      flex: 0 0 auto;
-      width: 80%;
-      scroll-snap-align: start;
-    }
-  }
-</style>
-{% else %}
-<style>
-  @media screen and (max-width: 768px) {
-    .ai-collections-grid__grid-{{ section.id }} {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 16px;
-    }
+    {% endif %}
   }
-</style>
-{% endif %}
 
+  .ai-collections-grid__item-{{ ai_gen_id }} {
+    {% if block.settings.mobile_layout == 'scroll' %}
+      flex: 0 0 auto;
+      width: 30%;
+      scroll-snap-align: start;
+    {% endif %}
+  }
 
 {% endstyle %}
 
