@@ -3941,7 +3941,8 @@ accordion-custom {
     &:not([open]) {
       &::details-content,
       .details-content {
-        padding-block: 0;
+           opacity: 1;
+        block-size: auto;
       }
     }
 
