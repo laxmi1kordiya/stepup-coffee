@@ -60,7 +60,7 @@
                 "link": "",
                 "open_in_new_tab": false,
                 "content_direction": "row",
-                "vertical_on_mobile": false,
+                "vertical_on_mobile": true,
                 "horizontal_alignment": "flex-start",
                 "vertical_alignment": "flex-start",
                 "align_baseline": false,
@@ -71,7 +71,7 @@
                 "custom_width": 50,
                 "width_mobile": "fill",
                 "custom_width_mobile": 100,
-                "height": "fill",
+                "height": "fit",
                 "custom_height": 100,
                 "inherit_color_scheme": true,
                 "color_scheme": "",
@@ -92,33 +92,33 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "menu_33zhMd": {
+                "menu_yiQQfm": {
                   "type": "menu",
                   "name": "t:names.menu",
                   "settings": {
                     "menu": "footer",
-                    "heading": "shop",
+                    "heading": "Shop",
                     "menu_spacing": 12,
                     "show_as_accordion": false,
                     "accordion_icon": "caret",
                     "accordion_dividers": false,
                     "inherit_color_scheme": true,
-                    "color_scheme": "scheme-1",
+                    "color_scheme": "scheme-5",
                     "heading_preset": "h4",
-                    "link_preset": "paragraph",
+                    "link_preset": "h5",
                     "padding-block-start": 0,
-                    "padding-block-end": 0,
+                    "padding-block-end": 12,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
                   },
                   "blocks": {}
                 },
-                "menu_f4eB8Y": {
+                "menu_MYcwzY": {
                   "type": "menu",
                   "name": "t:names.menu",
                   "settings": {
                     "menu": "quick-links",
-                    "heading": "Quick link",
+                    "heading": "customer service",
                     "menu_spacing": 12,
                     "show_as_accordion": false,
                     "accordion_icon": "caret",
@@ -126,20 +126,20 @@
                     "inherit_color_scheme": true,
                     "color_scheme": "",
                     "heading_preset": "h4",
-                    "link_preset": "paragraph",
+                    "link_preset": "h5",
                     "padding-block-start": 0,
-                    "padding-block-end": 0,
+                    "padding-block-end": 12,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
                   },
                   "blocks": {}
                 },
-                "menu_YrXrnB": {
+                "menu_7KHG7D": {
                   "type": "menu",
                   "name": "t:names.menu",
                   "settings": {
-                    "menu": "test",
-                    "heading": "About us",
+                    "menu": "policy-links",
+                    "heading": "Connect",
                     "menu_spacing": 12,
                     "show_as_accordion": false,
                     "accordion_icon": "caret",
@@ -147,9 +147,9 @@
                     "inherit_color_scheme": true,
                     "color_scheme": "",
                     "heading_preset": "h4",
-                    "link_preset": "paragraph",
+                    "link_preset": "h5",
                     "padding-block-start": 0,
-                    "padding-block-end": 0,
+                    "padding-block-end": 12,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
                   },
@@ -157,9 +157,9 @@
                 }
               },
               "block_order": [
-                "menu_33zhMd",
-                "menu_f4eB8Y",
-                "menu_YrXrnB"
+                "menu_yiQQfm",
+                "menu_MYcwzY",
+                "menu_7KHG7D"
               ]
             },
             "group_tgmxpw": {
@@ -205,7 +205,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2><strong>newsletter</strong></h2>",
+                    "text": "<h3>Sign up for our newsletter</h3>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
