@@ -1863,7 +1863,6 @@
       "blocks": {
         "ai_gen_block_bcc9c62_zkegfK": {
           "type": "ai_gen_block_bcc9c62",
-          "disabled": true,
           "settings": {
             "title": "What Our Customers Say",
             "subtitle": "Real reviews from real customers",
