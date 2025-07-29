@@ -14,7 +14,6 @@
   }
 
   .ai-collections-grid__container-{{ ai_gen_id }} {
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
   }
@@ -141,7 +140,7 @@
   .ai-collections-grid__item-{{ ai_gen_id }} {
     {% if block.settings.mobile_layout == 'scroll' %}
       flex: 0 0 auto;
-      width: 80%;
+      width: 50%;
       scroll-snap-align: start;
     {% endif %}
   }
