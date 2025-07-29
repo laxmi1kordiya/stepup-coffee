@@ -161,10 +161,32 @@
                 "email_signup_iQEjHV",
                 "payment_icons_txnjdV"
               ]
+            },
+            "menu_TT3xeG": {
+              "type": "menu",
+              "name": "t:names.menu",
+              "settings": {
+                "menu": "quick-links",
+                "heading": "Quick links",
+                "menu_spacing": 12,
+                "show_as_accordion": false,
+                "accordion_icon": "caret",
+                "accordion_dividers": false,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "heading_preset": "h3",
+                "link_preset": "paragraph",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
             }
           },
           "block_order": [
-            "group_tgmxpw"
+            "group_tgmxpw",
+            "menu_TT3xeG"
           ]
         },
         "footer_utilities_zVWazC": {
