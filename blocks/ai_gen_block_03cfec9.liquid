@@ -123,30 +123,6 @@
       gap: {{ block.settings.grid_gap | times: 0.5 }}px;
     }
   }
-
-  @media screen and (max-width: 768px) {
-  .ai-collections-grid__grid-{{ ai_gen_id }} {
-    {% if block.settings.mobile_layout == 'scroll' %}
-     display: flex;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      gap: 16px;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-    }
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    {% endif %}
-  }
-
-  .ai-collections-grid__item-{{ ai_gen_id }} {
-    {% if block.settings.mobile_layout == 'scroll' %}
-      flex: 0 0 auto;
-      width: 30%;
-    {% endif %}
-  }
-
 {% endstyle %}
 
 <div class="ai-collections-grid-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
@@ -408,22 +384,6 @@
     {
       "type": "header",
       "content": "Spacing"
-    },
-         {
-      "type": "select",
-      "id": "mobile_layout",
-      "label": "Mobile layout style",
-      "options": [
-        {
-      "value": "grid",
-      "label": "Grid"
-    },
-    {
-      "value": "scroll",
-      "label": "Horizontal Scroll"
-    },
-      ],
-      "default": "grid"
     },
     {
       "type": "range",
