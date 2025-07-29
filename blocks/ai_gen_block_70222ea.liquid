@@ -20,7 +20,8 @@
   }
 
   .ai-video-grid-heading-{{ ai_gen_id }} {
-    text-align: center;
+   text-align: {{ block.settings.heading_alignment }};
+   font-weight:600;
     margin-bottom: {{ block.settings.grid_gap }}px;
     color: {{ block.settings.text_color }};font-size: {{ block.settings.heading_size }}px;}
 
