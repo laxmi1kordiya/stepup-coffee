@@ -128,9 +128,12 @@
   .ai-collections-grid__grid-{{ ai_gen_id }} {
     {% if block.settings.mobile_layout == 'scroll' %}
      display: flex;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100vw;
     }
       display: grid;
       grid-template-columns: repeat(2, 1fr);
