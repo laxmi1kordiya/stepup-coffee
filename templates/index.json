@@ -1857,87 +1857,6 @@
         "padding-block-start": 32,
         "padding-block-end": 32
       }
-    },
-    "1753772657b0766aea": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_bcc9c62_zkegfK": {
-          "type": "ai_gen_block_bcc9c62",
-          "settings": {
-            "title": "What Our Customers Say",
-            "subtitle": "Real reviews from real customers",
-            "autoplay": true,
-            "autoplay_speed": 5,
-            "testimonial_1_name": "Sarah Johnson",
-            "testimonial_1_text": "Amazing quality and fast shipping! I'm so happy with my purchase and will definitely be ordering again.",
-            "testimonial_1_rating": 5,
-            "testimonial_2_name": "Mike Chen",
-            "testimonial_2_text": "Excellent customer service and the product exceeded my expectations. Highly recommend this store!",
-            "testimonial_2_rating": 5,
-            "testimonial_3_name": "Emma Davis",
-            "testimonial_3_text": "Love the quality and attention to detail. This has become my go-to store for all my needs.",
-            "testimonial_3_rating": 5,
-            "testimonial_4_name": "James Wilson",
-            "testimonial_4_text": "Outstanding products and service. The team really cares about their customers and it shows.",
-            "testimonial_4_rating": 4,
-            "testimonial_5_name": "Lisa Martinez",
-            "testimonial_5_text": "Perfect fit and amazing quality. I've recommended this store to all my friends and family.",
-            "testimonial_5_rating": 5,
-            "testimonial_6_name": "David Brown",
-            "testimonial_6_text": "Great value for money and fantastic customer support. Will definitely shop here again!",
-            "testimonial_6_rating": 5,
-            "card_background": "#ffffff",
-            "card_border_radius": 12,
-            "image_size": 80,
-            "title_size": 32,
-            "title_color": "#000000",
-            "subtitle_size": 16,
-            "subtitle_color": "#666666",
-            "name_size": 18,
-            "name_color": "#000000",
-            "text_size": 16,
-            "text_color": "#333333",
-            "star_size": 20,
-            "star_color": "#FFD700",
-            "nav_button_color": "#000000",
-            "nav_button_text_color": "#ffffff",
-            "nav_button_hover_color": "#333333",
-            "dot_color": "#cccccc",
-            "dot_active_color": "#000000"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_bcc9c62_zkegfK"
-      ],
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
     }
   },
   "order": [
@@ -1951,7 +1870,6 @@
     "1753437846eefb0af6",
     "section_H8A87k",
     "marquee_4WXUqi",
-    "section_99ai7q",
-    "1753772657b0766aea"
+    "section_99ai7q"
   ]
 }
