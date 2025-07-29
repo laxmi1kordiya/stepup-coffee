@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "slideshow_gpeTLy": {
@@ -1737,7 +1746,7 @@
         "section_width": "page-width",
         "section_height": "",
         "section_height_custom": 50,
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-cffbdd7f-6fd2-4ad0-85f3-28bb504ca006",
         "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",
@@ -1762,6 +1771,7 @@
           "settings": {
             "source": "uploaded",
             "video": "shopify://files/videos/2182228_Thermos_Vacuum Flask_3840x2160.mp4",
+            "video_url": "",
             "video_autoplay": true,
             "video_loop": true,
             "alt": "",
