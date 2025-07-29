@@ -734,7 +734,7 @@
                 "text_iKEepa": {
                   "type": "text",
                   "settings": {
-                    "text": "<h2><strong>Intentional design</strong></h2>",
+                    "text": "<h3><strong>Selected Coffee Beans</strong></h3>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -883,7 +883,7 @@
                 "text_6gemVm": {
                   "type": "text",
                   "settings": {
-                    "text": "<h2><strong>Made with care</strong></h2>",
+                    "text": "<h3><strong>Fast US Shipping</strong></h3>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1032,7 +1032,7 @@
                 "text_QKAhUB": {
                   "type": "text",
                   "settings": {
-                    "text": "<h2><strong>A team with a goal</strong></h2>",
+                    "text": "<h3><strong>Stand Out & Be Bold</strong></h3>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1185,7 +1185,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<h2><strong>A team with a goal</strong></h2>",
+                    "text": "<h3><strong>100% Safe & Secure Checkout</strong></h3>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
