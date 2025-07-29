@@ -212,6 +212,27 @@
                     "accordion_icon": "caret",
                     "accordion_dividers": false,
                     "inherit_color_scheme": true,
+                    "color_scheme": "scheme-1",
+                    "heading_preset": "h3",
+                    "link_preset": "paragraph",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "menu_f4eB8Y": {
+                  "type": "menu",
+                  "name": "t:names.menu",
+                  "settings": {
+                    "menu": "quick-links",
+                    "heading": "Quick link",
+                    "menu_spacing": 12,
+                    "show_as_accordion": false,
+                    "accordion_icon": "caret",
+                    "accordion_dividers": false,
+                    "inherit_color_scheme": true,
                     "color_scheme": "",
                     "heading_preset": "h3",
                     "link_preset": "paragraph",
@@ -224,7 +245,8 @@
                 }
               },
               "block_order": [
-                "menu_33zhMd"
+                "menu_33zhMd",
+                "menu_f4eB8Y"
               ]
             }
           },
