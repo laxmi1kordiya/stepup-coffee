@@ -92,43 +92,64 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "menu_33zhMd": {
+                "menu_yiQQfm": {
                   "type": "menu",
                   "name": "t:names.menu",
                   "settings": {
                     "menu": "footer",
-                    "heading": "shop",
+                    "heading": "Shop",
                     "menu_spacing": 12,
                     "show_as_accordion": false,
                     "accordion_icon": "caret",
                     "accordion_dividers": false,
                     "inherit_color_scheme": true,
-                    "color_scheme": "scheme-1",
-                    "heading_preset": "h3",
-                    "link_preset": "paragraph",
+                    "color_scheme": "scheme-5",
+                    "heading_preset": "h4",
+                    "link_preset": "h5",
                     "padding-block-start": 0,
-                    "padding-block-end": 0,
+                    "padding-block-end": 12,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
                   },
                   "blocks": {}
                 },
-                "menu_f4eB8Y": {
+                "menu_MYcwzY": {
                   "type": "menu",
                   "name": "t:names.menu",
                   "settings": {
                     "menu": "quick-links",
-                    "heading": "Quick link",
+                    "heading": "customer service",
                     "menu_spacing": 12,
                     "show_as_accordion": false,
                     "accordion_icon": "caret",
                     "accordion_dividers": false,
                     "inherit_color_scheme": true,
                     "color_scheme": "",
-                    "heading_preset": "h3",
-                    "link_preset": "paragraph",
+                    "heading_preset": "h4",
+                    "link_preset": "h5",
                     "padding-block-start": 0,
-                    "padding-block-end": 0,
+                    "padding-block-end": 12,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "menu_7KHG7D": {
+                  "type": "menu",
+                  "name": "t:names.menu",
+                  "settings": {
+                    "menu": "policy-links",
+                    "heading": "Connect",
+                    "menu_spacing": 12,
+                    "show_as_accordion": false,
+                    "accordion_icon": "caret",
+                    "accordion_dividers": false,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "heading_preset": "h4",
+                    "link_preset": "h5",
+                    "padding-block-start": 0,
+                    "padding-block-end": 12,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
                   },
@@ -136,8 +157,9 @@
                 }
               },
               "block_order": [
-                "menu_33zhMd",
-                "menu_f4eB8Y"
+                "menu_yiQQfm",
+                "menu_MYcwzY",
+                "menu_7KHG7D"
               ]
             },
             "group_tgmxpw": {
@@ -248,33 +270,11 @@
                 "email_signup_iQEjHV",
                 "payment_icons_txnjdV"
               ]
-            },
-            "menu_xDa36e": {
-              "type": "menu",
-              "name": "t:names.menu",
-              "settings": {
-                "menu": "main-menu",
-                "heading": "",
-                "menu_spacing": 12,
-                "show_as_accordion": false,
-                "accordion_icon": "caret",
-                "accordion_dividers": false,
-                "inherit_color_scheme": true,
-                "color_scheme": "",
-                "heading_preset": "h3",
-                "link_preset": "paragraph",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
             }
           },
           "block_order": [
             "group_CPh9EU",
-            "group_tgmxpw",
-            "menu_xDa36e"
+            "group_tgmxpw"
           ]
         },
         "footer_utilities_zVWazC": {
