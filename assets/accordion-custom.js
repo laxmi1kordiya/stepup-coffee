@@ -77,45 +77,13 @@ class AccordionCustom extends HTMLElement {
   /**
    * Sets the default open state of the accordion based on the `open-by-default-on-mobile` and `open-by-default-on-desktop` attributes.
    */
-
-  // this is the correct code for accordions 
-  // #setDefaultOpenState() {
-  //   const isMobile = isMobileBreakpoint();
-
-  //   this.details.open =
-  //     (isMobile && this.hasAttribute('open-by-default-on-mobile')) ||
-  //     (!isMobile && this.hasAttribute('open-by-default-on-desktop'));
-  // }
-
-
-
   #setDefaultOpenState() {
-  const isMobile = isMobileBreakpoint();
-  const accordions = document.querySelectorAll('accordion-custom');
+    const isMobile = isMobileBreakpoint();
 
-  let firstDesktopAccordion = null;
-  let firstMobileAccordion = null;
-
-  accordions.forEach((accordion) => {
-    const shouldOpenDesktop = accordion.hasAttribute('open-by-default-on-desktop');
-    const shouldOpenMobile = accordion.hasAttribute('open-by-default-on-mobile');
-
-    if (!firstDesktopAccordion && shouldOpenDesktop) {
-      firstDesktopAccordion = accordion;
-    }
-
-    if (!firstMobileAccordion && shouldOpenMobile) {
-      firstMobileAccordion = accordion;
-    }
-  });
-
-  const shouldOpen =
-    (isMobile && this === firstMobileAccordion) ||
-    (!isMobile && this === firstDesktopAccordion);
-
-  this.details.open = shouldOpen;
-}
-
+    this.details.open =
+      (isMobile && this.hasAttribute('open-by-default-on-mobile')) ||
+      (!isMobile && this.hasAttribute('open-by-default-on-desktop'));
+  }
 
   /**
    * Handles keydown events for the accordion
