@@ -1762,6 +1762,47 @@
         "padding-block-end": 40
       }
     },
+    "marquee_4WXUqi": {
+      "type": "marquee",
+      "blocks": {
+        "text_nVK4mN": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Why settle for regular gifts when you can Gift the Brew-tiful Experience of StepUp Coffee? ✨ Let's Espresso Our Love for the Summer  Holidays! 🚀</strong></p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "font_size": "2.5rem",
+            "line_height": "tight",
+            "letter_spacing": "tight",
+            "case": "none",
+            "wrap": "nowrap",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_nVK4mN"
+      ],
+      "name": "t:names.marquee_section",
+      "settings": {
+        "movement_direction": "normal",
+        "color_scheme": "scheme-d5883251-a62d-43af-9604-8a3b262ef9ac",
+        "padding-block-start": 30,
+        "padding-block-end": 30,
+        "gap_between_elements": 30
+      }
+    },
     "section_99ai7q": {
       "type": "section",
       "blocks": {
@@ -1781,7 +1822,7 @@
             "border": "none",
             "border_width": 1,
             "border_opacity": 100,
-            "border_radius": 0,
+            "border_radius": 10,
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
@@ -1813,7 +1854,7 @@
         "border": "none",
         "border_width": 1,
         "border_opacity": 100,
-        "border_radius": 0,
+        "border_radius": 10,
         "toggle_overlay": false,
         "overlay_color": "#00000026",
         "overlay_style": "solid",
@@ -1833,6 +1874,7 @@
     "section_XXxeMB",
     "1753437846eefb0af6",
     "section_H8A87k",
+    "marquee_4WXUqi",
     "section_99ai7q"
   ]
 }
