@@ -130,6 +130,7 @@
     {% if block.settings.mobile_layout == 'scroll' %}
       display: flex;
       flex-wrap: nowrap;
+      overflow-x: auto;
     {% else %}
       display: grid;
       grid-template-columns: repeat(2, 1fr);
