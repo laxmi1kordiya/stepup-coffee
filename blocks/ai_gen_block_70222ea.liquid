@@ -20,7 +20,8 @@
   }
 
   .ai-video-grid-heading-{{ ai_gen_id }} {
-    text-align: center;
+   text-align: {{ block.settings.heading_alignment }};
+   font-weight:600;
     margin-bottom: {{ block.settings.grid_gap }}px;
     color: {{ block.settings.text_color }};font-size: {{ block.settings.heading_size }}px;}
 
@@ -152,6 +153,44 @@
       grid-template-columns: 1fr;
     }
   }
+
+  @media screen and (max-width: 768px) {
+  .ai-video-grid-wrapper-{{ ai_gen_id }} {
+    {% if block.settings.mobile_layout == 'scroll' %}
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: {{ block.settings.grid_gap }}px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    {% else %}
+      grid-template-columns: repeat({{ block.settings.columns_mobile }}, 1fr);
+    {% endif %}
+  }
+
+  .ai-video-item-{{ ai_gen_id }} {
+    {% if block.settings.mobile_layout == 'scroll' %}
+      flex: 0 0 auto;
+      width: 80%;
+      scroll-snap-align: start;
+    {% endif %}
+  }
+
+  .ai-video-overlay-{{ ai_gen_id }} {
+    padding: 15px;
+  }
+
+  .ai-video-play-button-{{ ai_gen_id }} {
+    width: 50px;
+    height: 50px;
+  }
+
+  .ai-video-play-button-{{ ai_gen_id }} svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 {% endstyle %}
 
 <video-grid-{{ ai_gen_id }} class="ai-video-grid-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
@@ -328,6 +367,17 @@
       "default": 32
     },
     {
+  "type": "select",
+  "id": "heading_alignment",
+  "label": "Heading alignment",
+  "options": [
+    { "value": "left", "label": "Left" },
+    { "value": "center", "label": "Center" },
+    { "value": "right", "label": "Right" }
+  ],
+  "default": "center"
+},
+    {
       "type": "header",
       "content": "Grid Layout"
     },
@@ -390,6 +440,22 @@
         }
       ],
       "default": "16/9"
+    },
+     {
+      "type": "select",
+      "id": "mobile_layout",
+      "label": "Mobile layout style",
+      "options": [
+        {
+      "value": "grid",
+      "label": "Grid"
+    },
+    {
+      "value": "scroll",
+      "label": "Horizontal Scroll"
+    },
+      ],
+      "default": "grid"
     },
     {
       "type": "range",
