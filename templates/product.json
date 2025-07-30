@@ -42,7 +42,6 @@
         },
         "product-details": {
           "type": "_product-details",
-          "disabled": true,
           "static": true,
           "settings": {
             "width": "fit-content",
