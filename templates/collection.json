@@ -263,11 +263,24 @@
                         "padding-inline-end": 0
                       },
                       "blocks": {}
+                    },
+                    "review_RDCMkM": {
+                      "type": "review",
+                      "name": "t:names.product_review_stars",
+                      "settings": {
+                        "stars_style": "shaded",
+                        "show_number": true,
+                        "rating_color": "primary",
+                        "type_preset": "paragraph",
+                        "alignment": "left"
+                      },
+                      "blocks": {}
                     }
                   },
                   "block_order": [
                     "product_title_GDE6KA",
-                    "price_prVYBm"
+                    "price_prVYBm",
+                    "review_RDCMkM"
                   ]
                 },
                 "group_njW3rP": {
@@ -332,11 +345,49 @@
                 "group_wwVYk6",
                 "group_njW3rP"
               ]
+            },
+            "buy_buttons_xmmXXX": {
+              "type": "buy-buttons",
+              "name": "t:names.product_buy_buttons",
+              "settings": {
+                "stacking": false,
+                "show_pickup_availability": true,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "quantity": {
+                  "type": "quantity",
+                  "disabled": true,
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                },
+                "add-to-cart": {
+                  "type": "add-to-cart",
+                  "static": true,
+                  "settings": {
+                    "style_class": "button"
+                  },
+                  "blocks": {}
+                },
+                "accelerated-checkout": {
+                  "type": "accelerated-checkout",
+                  "disabled": true,
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                }
+              },
+              "block_order": []
             }
           },
           "block_order": [
             "card-gallery",
-            "group"
+            "group",
+            "buy_buttons_xmmXXX"
           ]
         }
       },
