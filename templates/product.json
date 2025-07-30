@@ -117,12 +117,27 @@
             "divider_HrJgFt": {
               "type": "_divider",
               "name": "t:names.divider",
+              "disabled": true,
               "settings": {
                 "thickness": 1,
                 "corner_radius": "square",
                 "width_percent": 100,
                 "padding-block-start": 12,
                 "padding-block-end": 12
+              },
+              "blocks": {}
+            },
+            "swatches_XND6jp": {
+              "type": "swatches",
+              "name": "t:names.swatches",
+              "settings": {
+                "product_swatches_alignment": "flex-start",
+                "product_swatches_alignment_mobile": "flex-start",
+                "hide_padding": false,
+                "product_swatches_padding_top": 4,
+                "product_swatches_padding_bottom": 0,
+                "product_swatches_padding_left": 0,
+                "product_swatches_padding_right": 0
               },
               "blocks": {}
             },
@@ -152,7 +167,6 @@
               "blocks": {
                 "quantity": {
                   "type": "quantity",
-                  "disabled": true,
                   "static": true,
                   "settings": {},
                   "blocks": {}
@@ -179,6 +193,7 @@
             "heading_m7KmQQ",
             "price_a7krng",
             "divider_HrJgFt",
+            "swatches_XND6jp",
             "variant_picker_R3rGDr",
             "buy_buttons_eYQEYi"
           ]
