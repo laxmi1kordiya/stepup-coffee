@@ -191,6 +191,7 @@
             "product_description_fGAxDT": {
               "type": "product-description",
               "name": "t:names.product_description",
+              "disabled": true,
               "settings": {
                 "text": "<p>{{ closest.product.description }}</p>",
                 "width": "fit-content",
